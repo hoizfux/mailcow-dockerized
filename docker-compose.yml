@@ -124,7 +124,7 @@ services:
         - ./data/assets/templates:/tpls:z
         - ./data/conf/ejabberd/autogen:/ejabberd/:z
         - ./data/conf/nginx/:/etc/nginx/conf.d/:z
-        - rainloop-vol-1:/web/rainloop/data/:z
+        - rainloop-vol-1:/web/rainloop/data/:rw,z
       dns:
         - ${IPV4_NETWORK:-172.22.1}.254
       environment:
