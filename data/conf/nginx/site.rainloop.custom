@@ -1,0 +1,3 @@
+location ^~ /rainloop/data {
+    deny all;
+}
