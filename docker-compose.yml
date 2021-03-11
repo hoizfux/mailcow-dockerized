@@ -102,7 +102,7 @@ services:
 
     php-fpm-mailcow:
       image: mailcow/phpfpm:1.73
-      command: "chown www-data:www-data /web/rainloop/data && php-fpm -d date.timezone=${TZ} -d expose_php=0"
+      command: /bin/sh -c "chown www-data:www-data /web/rainloop/data && php-fpm -d date.timezone=${TZ} -d expose_php=0"
       depends_on:
         - redis-mailcow
       volumes:
