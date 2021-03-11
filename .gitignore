@@ -32,7 +32,6 @@ data/conf/portainer/
 data/conf/postfix/allow_mailcow_local.regexp
 data/conf/postfix/custom_postscreen_whitelist.cidr
 data/conf/postfix/custom_transport.pcre
-data/conf/postfix/extra.cf
 data/conf/postfix/sni.map
 data/conf/postfix/sni.map.db
 data/conf/postfix/sql
@@ -51,7 +50,6 @@ data/web/css/build/0081-custom-mailcow.css
 data/web/inc/vars.local.inc.php
 data/web/nextcloud*/
 data/web/rc*/
-docker-compose.override.yml
 mailcow.conf
 mailcow.conf_backup
 rebuild-images.sh
