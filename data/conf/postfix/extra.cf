@@ -1,0 +1,2 @@
+smtp_address_preference = ipv4
+inet_protocols = ipv4
