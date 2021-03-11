@@ -124,7 +124,7 @@ services:
         - ./data/assets/templates:/tpls:z
         - ./data/conf/ejabberd/autogen:/ejabberd/:z
         - ./data/conf/nginx/:/etc/nginx/conf.d/:z
-        - rainloop-vol-1:/web/rainloop/data/:rw,z
+        - rainloop-vol-1:/web/rainloop/data/:z
       dns:
         - ${IPV4_NETWORK:-172.22.1}.254
       environment:
@@ -321,6 +321,7 @@ services:
         . /etc/nginx/conf.d/templates/server_name.template.sh > /etc/nginx/conf.d/server_name.active &&
         . /etc/nginx/conf.d/templates/sites.template.sh > /etc/nginx/conf.d/sites.active &&
         . /etc/nginx/conf.d/templates/sogo_eas.template.sh > /etc/nginx/conf.d/sogo_eas.active &&
+        chown www-data:www-data /web/rainloop/data
         nginx -qt &&
         until ping phpfpm -c1 > /dev/null; do sleep 1; done &&
         until ping sogo -c1 > /dev/null; do sleep 1; done &&
